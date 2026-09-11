@@ -348,3 +348,80 @@ planets.forEach(planet => {
 
     planetContainer.appendChild(system);
 });
+
+// Create Moons
+// This function creates the moons for a given planet by generating the necessary HTML elements and positioning them appropriately.
+function createMoons(system, planet) {
+    const spacing = 48;
+
+    const firstMoon =
+        planet.size / 2 + 40;
+
+    const line = document.createElement("div");
+
+    line.className = "moon-line";
+
+    line.style.height =
+        firstMoon +
+        spacing * (planet.moons.length - 1)
+        - planet.size / 2 +
+        "px";
+
+    system.appendChild(line);
+
+    planet.moons.forEach((moon, index) => {
+        const y =
+            firstMoon +
+            spacing * index;
+
+        const button =
+            document.createElement("button");
+
+        button.className = "moon";
+        button.type = "button";
+
+        button.style.top = y + "px";
+
+        button.style.setProperty(
+            "--moon-width",
+            moon.size + "px"
+        );
+
+        button.style.setProperty(
+            "--moon-height",
+            moon.size + "px"
+        );
+
+
+        const image =
+            document.createElement("img");
+
+        image.src = moon.image;
+        image.alt = moon.name;
+
+        button.appendChild(image);
+
+        const label =
+            document.createElement("div");
+
+        label.className = "moon-label";
+
+        label.textContent = moon.name;
+
+        label.style.top = y + "px";
+
+        label.style.setProperty(
+            "--moon-label-offset",
+            moon.size / 2 + 12 + "px"
+        );
+
+        button.addEventListener("click", () => {
+            selectBody(button);
+            showInfo(moon);
+        });
+
+
+        system.appendChild(button);
+        system.appendChild(label);
+    });
+}

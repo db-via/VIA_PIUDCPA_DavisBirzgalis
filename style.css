@@ -188,3 +188,152 @@ body {
             rgba(255, 190, 40, 0.6)
         );
 }
+
+/* Planet System Styling */
+#planet-container {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+/* Styling for the planet system */
+.planet-system {
+    position: absolute;
+
+    top: 50%;
+
+    width: 0;
+    height: 0;
+
+    overflow: visible;
+}
+
+/* Planet Styling */
+.planet {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: var(--planet-width);
+    height: var(--planet-height);
+
+    padding: 0;
+
+    transform:
+        translate(-50%, -50%);
+
+    border: none;
+
+    background: none;
+
+    cursor: pointer;
+
+    pointer-events: auto;
+
+    z-index: 5;
+
+    transition:
+        transform 180ms ease,
+        filter 180ms ease;
+}
+
+/* Planet Image Styling */
+.planet img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    user-select: none;
+
+    pointer-events: none;
+
+    -webkit-user-drag: none;
+
+    filter:
+        drop-shadow(
+            4px 5px 4px
+            rgba(0, 0, 0, 0.55)
+        );
+}
+
+/* Hover effect for planets */
+.planet:hover {
+    transform:
+        translate(-50%, -50%)
+        scale(1.08);
+
+    z-index: 20;
+}
+
+/* Hover effect for planet images */
+.planet:hover img {
+    filter:
+        brightness(1.08)
+        drop-shadow(
+            0 0 7px
+            rgba(255, 255, 255, 0.25)
+        )
+        drop-shadow(
+            5px 6px 5px
+            rgba(0, 0, 0, 0.6)
+        );
+}
+
+/* Focus-visible effect for planets */
+.planet:focus-visible {
+    outline:
+        2px solid
+        rgba(255, 255, 255, 0.8);
+
+    outline-offset: 5px;
+
+    border-radius: 50%;
+}
+
+/* Planet Label Styling */
+.planet-label {
+    position: absolute;
+
+    left: 0;
+
+    bottom:
+        calc(
+            var(--planet-height) / 2
+            + 11px
+        );
+
+    transform:
+        translateX(-50%);
+
+    color:
+        rgba(
+            205,
+            205,
+            205,
+            0.82
+        );
+
+    font-size: 15px;
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    text-align: center;
+
+    pointer-events: none;
+
+    text-shadow:
+        0 1px 2px black,
+        0 0 4px black;
+
+    z-index: 10;
+}
