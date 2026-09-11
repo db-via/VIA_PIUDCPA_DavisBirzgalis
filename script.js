@@ -425,3 +425,105 @@ function createMoons(system, planet) {
         system.appendChild(label);
     });
 }
+
+// Show Information
+// This function displays the information panel for a selected celestial body, populating it with the relevant data and playing the associated ambient audio.
+function showInfo(body) {
+    if (!infoPanel) return;
+
+    infoImage.src = body.image || "";
+    infoImage.alt = body.name || "";
+
+    infoName.textContent = body.name || "Unknown";
+    infoType.textContent = body.type || "Celestial Body";
+    infoDescription.textContent = body.description || "No description available.";
+
+    // Clear and rebuild the statistics.
+    infoStatistics.innerHTML = "";
+
+    if (body.stats) {
+        for (const [name, value] of Object.entries(body.stats)) {
+            const row = document.createElement("div");
+            row.className = "stat-row";
+
+            const statName = document.createElement("span");
+            statName.className = "stat-name";
+            statName.textContent = name;
+
+            const statValue = document.createElement("span");
+            statValue.className = "stat-value";
+            statValue.textContent = value;
+
+            row.append(statName, statValue);
+            infoStatistics.appendChild(row);
+        }
+    }
+
+    // Load and play the body's ambient track.
+    ambientPlayer.pause();
+
+    if (body.audio) {
+        ambientName.textContent = body.name + " Ambient";
+
+        // Only reload when switching to a different file.
+        const nextSource = new URL(body.audio, window.location.href).href;
+
+        if (ambientPlayer.src !== nextSource) {
+            ambientPlayer.src = body.audio;
+            ambientPlayer.load();
+        }
+
+        ambientPlayer.play().catch(error => {
+            // The panel still works even if the audio file is missing
+            // or the browser refuses playback.
+            console.warn("Could not play ambient audio:", error);
+        });
+    } else {
+        ambientName.textContent = "No ambient track";
+        ambientPlayer.removeAttribute("src");
+        ambientPlayer.load();
+    }
+
+    infoPanel.classList.add("open");
+    infoPanel.setAttribute("aria-hidden", "false");
+}
+
+// Select Body
+// This function highlights the selected celestial body by adding a "selected" class to it and removing that class from any previously selected bodies.
+function selectBody(body) {
+    document
+        .querySelectorAll(".selected")
+        .forEach(element => {
+            element.classList.remove("selected");
+        });
+
+
+    body.classList.add("selected");
+}
+
+// Close Information
+// This function closes the information panel and stops any ambient audio that is playing.
+function closeInfo() {
+    infoPanel.classList.remove("open");
+    infoPanel.setAttribute("aria-hidden", "true");
+
+    ambientPlayer.pause();
+
+    document
+        .querySelectorAll(".selected")
+        .forEach(element => {
+            element.classList.remove("selected");
+        });
+}
+
+
+if (infoClose) {
+    infoClose.addEventListener("click", closeInfo);
+}
+
+// Close Info Panel on Escape Key
+document.addEventListener("keydown", event => {
+    if (event.key === "Escape") {
+        closeInfo();
+    }
+});
