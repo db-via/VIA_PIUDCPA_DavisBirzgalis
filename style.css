@@ -473,3 +473,310 @@ body {
 
     z-index: 10;
 }
+
+/* Information Panel Styling */
+.info-panel {
+    position: absolute;
+
+    right: 30px;
+    top: 30px;
+
+    width: 340px;
+
+    max-height: calc(100% - 60px);
+
+    padding: 24px;
+
+    overflow-y: auto;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(18, 22, 28, 0.94),
+            rgba(5, 8, 12, 0.96)
+        );
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.15);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 15px 50px
+        rgba(0, 0, 0, 0.65);
+
+    backdrop-filter:
+        blur(12px);
+
+    -webkit-backdrop-filter:
+        blur(12px);
+
+    z-index: 100;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateX(30px);
+
+    pointer-events: none;
+
+    transition:
+        opacity 220ms ease,
+        transform 220ms ease,
+        visibility 220ms ease;
+}
+
+/* Open state for the information panel */
+.info-panel.open {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateX(0);
+
+    pointer-events: auto;
+}
+
+/* Close Button Styling */
+.info-close {
+    position: absolute;
+
+    right: 12px;
+    top: 8px;
+
+    width: 40px;
+    height: 40px;
+
+    padding: 0;
+
+    border: none;
+
+    background: none;
+
+    color:
+        rgba(255, 255, 255, 0.65);
+
+    font-size: 32px;
+    font-family: Arial, sans-serif;
+
+    cursor: pointer;
+
+    transition:
+        color 150ms ease,
+        transform 150ms ease;
+}
+
+/* Hover effect for the close button */
+.info-close:hover {
+    color: white;
+
+    transform:
+        scale(1.1);
+}
+
+/* Image Container Styling */
+.info-image-container {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 160px;
+
+    margin-bottom: 16px;
+}
+
+/* Image Styling */
+#info-image {
+    display: block;
+
+    max-width: 150px;
+    max-height: 150px;
+
+    object-fit: contain;
+
+    user-select: none;
+
+    filter:
+        drop-shadow(
+            0 8px 10px
+            rgba(0, 0, 0, 0.6)
+        );
+}
+
+/* Heading Styling */
+.info-heading {
+    margin-bottom: 16px;
+}
+
+/* Name and Type Styling */
+#info-type {
+    margin:
+        0
+        0
+        4px;
+
+    color:
+        rgba(255, 255, 255, 0.45);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+/* Name Styling */
+#info-name {
+    margin: 0;
+
+    color:
+        rgba(255, 255, 255, 0.94);
+
+    font-size: 30px;
+
+    font-weight: normal;
+}
+
+/* Description Styling */
+#info-description {
+    margin:
+        0
+        0
+        22px;
+
+    color:
+        rgba(220, 225, 230, 0.75);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+/* Statistics Section Styling */
+.info-statistics {
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 24px;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.1);
+}
+
+/* Individual Statistic Row Styling */
+.stat-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding:
+        10px
+        0;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 13px;
+}
+
+/* Statistic Name Styling */
+.stat-name {
+    color:
+        rgba(255, 255, 255, 0.45);
+}
+
+/* Statistic Value Styling */
+.stat-value {
+    color:
+        rgba(255, 255, 255, 0.85);
+
+    text-align: right;
+}
+
+/* Ambient Section Styling */
+.ambient-section {
+    padding-top: 16px;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+}
+
+/* Ambient Heading Styling */
+.ambient-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 12px;
+
+    font-family:
+        Arial,
+        sans-serif;
+}
+
+/* Ambient Icon Styling */
+.ambient-icon {
+    font-size: 22px;
+}
+
+/* Ambient Heading Text Styling */
+.ambient-heading div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+/* Ambient Title Styling */
+.ambient-title {
+    color:
+        rgba(255, 255, 255, 0.4);
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+/* Ambient Name Styling */
+#ambient-name {
+    color:
+        rgba(255, 255, 255, 0.85);
+
+    font-size: 13px;
+}
+
+/* Ambient Player Styling */
+#ambient-player {
+    width: 100%;
+
+    height: 36px;
+}
