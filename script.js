@@ -1,4 +1,5 @@
-// Kerbol Data
+// Data for the Kerbol System
+// This section defines the data for the Kerbol System, including the star (Kerbol), planets, and moons. Each celestial body has properties such as name, type, image, description, statistics, and ambient audio.
 const kerbol = {
     name: "Kerbol",
     type: "Star",
@@ -18,11 +19,11 @@ const kerbol = {
     },
 
     audio:
-        "audio/kerbol.mp3"
+        "audio/planet_ambiance/kerbol.mp3"
 };
 
-// Planet Data
-// This section defines an array of planet objects, each containing information about the planet, its moons (if any), and associated audio files.
+// Planets and Moons
+// This array contains the data for each planet and its moons in the Kerbol System.
 const planets = [
 
     {
@@ -37,7 +38,7 @@ const planets = [
             Gravity: "Placeholder",
             Atmosphere: "Placeholder"
         },
-        audio: "audio/moho.mp3"
+        audio: "audio/planet_ambiance/moho.mp3"
     },
 
     {
@@ -52,7 +53,7 @@ const planets = [
             Gravity: "Placeholder",
             Atmosphere: "Placeholder"
         },
-        audio: "audio/eve.mp3",
+        audio: "audio/planet_ambiance/eve.mp3",
 
         moons: [
             {
@@ -66,7 +67,7 @@ const planets = [
                     Gravity: "Placeholder",
                     Parent: "Eve"
                 },
-                audio: "audio/gilly.mp3"
+                audio: "audio/planet_ambiance/gilly.mp3"
             }
         ]
     },
@@ -83,7 +84,7 @@ const planets = [
             Gravity: "Placeholder",
             Atmosphere: "Placeholder"
         },
-        audio: "audio/kerbin.mp3",
+        audio: "audio/planet_ambiance/kerbin.mp3",
 
         moons: [
             {
@@ -97,7 +98,7 @@ const planets = [
                     Gravity: "Placeholder",
                     Parent: "Kerbin"
                 },
-                audio: "audio/Kerbin_moon.mp3"
+                audio: "audio/planet_ambiance/Kerbin_moon.mp3"
             },
 
             {
@@ -111,7 +112,7 @@ const planets = [
                     Gravity: "Placeholder",
                     Parent: "Kerbin"
                 },
-                audio: "audio/Kerbin_moon.mp3"
+                audio: "audio/planet_ambiance/Kerbin_moon.mp3"
             }
         ]
     },
@@ -128,7 +129,7 @@ const planets = [
             Gravity: "Placeholder",
             Atmosphere: "Placeholder"
         },
-        audio: "audio/duna.mp3",
+        audio: "audio/planet_ambiance/duna.mp3",
 
         moons: [
             {
@@ -142,7 +143,7 @@ const planets = [
                     Gravity: "Placeholder",
                     Parent: "Duna"
                 },
-                audio: "audio/ike.mp3"
+                audio: "audio/planet_ambiance/ike.mp3"
             }
         ]
     },
@@ -159,7 +160,7 @@ const planets = [
             Gravity: "Placeholder",
             Atmosphere: "Placeholder"
         },
-        audio: "audio/dres.mp3"
+        audio: "audio/planet_ambiance/dres.mp3"
     },
 
     {
@@ -174,7 +175,7 @@ const planets = [
             Gravity: "Placeholder",
             Atmosphere: "Placeholder"
         },
-        audio: "audio/jool.mp3",
+        audio: "audio/planet_ambiance/jool.mp3",
 
         moons: [
             {
@@ -187,7 +188,7 @@ const planets = [
                     Gravity: "Placeholder",
                     Parent: "Jool"
                 },
-                audio: "audio/jool_moon.mp3"
+                audio: "audio/planet_ambiance/jool_moon.mp3"
             },
 
             {
@@ -200,7 +201,7 @@ const planets = [
                     Gravity: "Placeholder",
                     Parent: "Jool"
                 },
-                audio: "audio/jool_moon.mp3"
+                audio: "audio/planet_ambiance/jool_moon.mp3"
             },
 
             {
@@ -213,7 +214,7 @@ const planets = [
                     Gravity: "Placeholder",
                     Parent: "Jool"
                 },
-                audio: "audio/jool_moon.mp3"
+                audio: "audio/planet_ambiance/jool_moon.mp3"
             },
 
             {
@@ -226,7 +227,7 @@ const planets = [
                     Gravity: "Placeholder",
                     Parent: "Jool"
                 },
-                audio: "audio/jool_moon.mp3"
+                audio: "audio/planet_ambiance/jool_moon.mp3"
             },
 
             {
@@ -239,7 +240,7 @@ const planets = [
                     Gravity: "Placeholder",
                     Parent: "Jool"
                 },
-                audio: "audio/jool_moon.mp3"
+                audio: "audio/planet_ambiance/jool_moon.mp3"
             }
         ]
     },
@@ -256,7 +257,7 @@ const planets = [
             Gravity: "Placeholder",
             Atmosphere: "Placeholder"
         },
-        audio: "audio/eeloo.mp3"
+        audio: "audio/planet_ambiance/eeloo.mp3"
     }
 ];
 
@@ -277,6 +278,15 @@ const infoStatistics = document.getElementById("info-statistics"); // The statis
 
 const ambientPlayer = document.getElementById("ambient-player"); // The audio player for ambient sounds
 const ambientName = document.getElementById("ambient-name"); // The name element for the ambient sound
+
+// Button for Kerbol (Sun)
+// This section adds an event listener to the Kerbol button, allowing users to select it and view its information when clicked.
+if (kerbolButton) {
+    kerbolButton.addEventListener("click", () => {
+        selectBody(kerbolButton);
+        showInfo(kerbol);
+    });
+}
 
 // Generate Stars
 // This section creates a star field background by generating multiple star elements with random properties.
