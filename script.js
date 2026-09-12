@@ -274,11 +274,12 @@ const planets = [
         x: 91,
         size: 25,
         image: "images/planets/eeloo.png",
-        description: "Placeholder information about Eeloo.",
+        description: "There’s been a considerable amount of controversy around the status of Eeloo as being a proper planet or a just a “lump of ice going around the sun”. The debate is still ongoing, as most academic summits held to address the issue have devolved into, on good days, petty name calling, and on worse ones, all-out brawls. Nevertheless, it is one of the most distant objects in the Kerbol System, and is a small, icy world with a highly eccentric orbit.",
         stats: {
-            Diameter: "Placeholder",
-            Gravity: "Placeholder",
-            Atmosphere: "Placeholder"
+            "Equatorial Diameter": "420 km",
+            "Surface Gravity": "1.69 m/s²",
+            "Approximate Surface Temperature": "100 K",
+            Atmosphere: "None"
         },
         audio: "audio/planet_ambiance/eeloo.mp3"
     }
