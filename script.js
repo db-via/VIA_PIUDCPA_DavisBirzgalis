@@ -8,14 +8,16 @@ const kerbol = {
         "images/planets/kerbol.png",
 
     description:
-        "Placeholder information about Kerbol. Replace this with information about the star.",
+        "Parent Star of the Kerbol System. It is the most well known object in the daytime sky. Scientists have noted a particular burning sensation and potential loss of vision if it is stared at for long periods of time. Impossible to land on, but not tested during nighttime.",
 
     stats: {
-        Diameter: "Placeholder",
+        Diameter: "523,200 km",
+        "Equatorial Circumference": "1,643,362 km",
         Mass: "Placeholder",
-        Temperature: "Placeholder",
-        "Star Type": "Placeholder",
-        "Number of Planets": "7"
+        Temperature: "5,840 K",
+        "Star Type": "Does Not Fit Any Stellar Classification?",
+        "Number of Planets": "5",
+        "Number of Dwarf Planets:": "2",
     },
 
     audio:
@@ -32,11 +34,12 @@ const planets = [
         x: 13,
         size: 25,
         image: "images/planets/moho.png",
-        description: "Placeholder information about Moho.",
+        description: "Third smallest and closest planet to Kerbol. Moho figures in Kerbal mythology as a fiery place with oceans of flowing lava. In reality however, it's much less interesting. Scientists speculate about possible ways to make it awesome like in the stories. Some of those ideas have led to new breakthroughs in aerospace technology. Inclined, eccentric orbit with no atmposhere, alongside with the close proximity to Kerbol, makes it a difficult target for interplanetary missions.",
         stats: {
-            Diameter: "Placeholder",
-            Gravity: "Placeholder",
-            Atmosphere: "Placeholder"
+            "Equatorial Diameter": "3,030 km",
+            "Surface Gravity": "2.67 m/s²",
+            Atmosphere: "None",
+            "Approximate Surface Temperature": "573 K"
         },
         audio: "audio/planet_ambiance/moho.mp3"
     },
@@ -47,11 +50,12 @@ const planets = [
         x: 20,
         size: 88,
         image: "images/planets/eve.png",
-        description: "Placeholder information about Eve.",
+        description: "Second planet from Kerbol. It is considered by some to be almost a sister planet to Kerbin. Well, despite the purple, and the toxic atmosphere, and the extreme pressures and temperatures. Actually, it is not very similar at all, is it? Eve has the greatest surface gravity of all the planets, and the second highest escape velocity. It is also the only planet with a significant atmosphere that is not breathable by Kerbals. Eve has one moon, Gilly, which is a small, irregularly shaped body with very low gravity.",
         stats: {
-            Diameter: "Placeholder",
-            Gravity: "Placeholder",
-            Atmosphere: "Placeholder"
+            "Equatorial Diameter": "7,176 km",
+            "Surface Gravity": "8.90 m/s²",
+            "Approximate Surface Temperature": "408 K",
+            Atmosphere: "Extremely thick and dense. Sea-level pressure of 5 Atmospheres."
         },
         audio: "audio/planet_ambiance/eve.mp3",
 
@@ -61,10 +65,10 @@ const planets = [
                 type: "Moon",
                 size: 12,
                 image: "images/moons/gilly.png",
-                description: "Placeholder information about Gilly.",
+                description: "The only natural satellite of Eve and smallest celestial body in the Kerbol System. Due to the large amount of squinting and eye strain associated with its discovery, wearing glasses has now become synonymous with being an accomplished Astronomer. This moon is also considered to be an captured asteroid.",
                 stats: {
-                    Diameter: "Placeholder",
-                    Gravity: "Placeholder",
+                    "Approximate Equatorial Diameter": "26 km",
+                    "Surface Gravity": "0.05 m/s²",
                     Parent: "Eve"
                 },
                 audio: "audio/planet_ambiance/gilly.mp3"
@@ -80,8 +84,8 @@ const planets = [
         image: "images/planets/kerbin.png",
         description: "Placeholder information about Kerbin.",
         stats: {
-            Diameter: "Placeholder",
-            Gravity: "Placeholder",
+            "Equatorial Diameter": "Placeholder",
+            "Surface Gravity": "Placeholder",
             Atmosphere: "Placeholder"
         },
         audio: "audio/planet_ambiance/kerbin.mp3",
