@@ -279,6 +279,10 @@ const infoStatistics = document.getElementById("info-statistics"); // The statis
 const ambientPlayer = document.getElementById("ambient-player"); // The audio player for ambient sounds
 const ambientName = document.getElementById("ambient-name"); // The name element for the ambient sound
 
+const creditsButton =document.getElementById("credits-button");
+const creditsPanel =document.getElementById("credits-panel");
+const creditsClose =document.getElementById("credits-close");
+
 // Button for Kerbol (Sun)
 // This section adds an event listener to the Kerbol button, allowing users to select it and view its information when clicked.
 if (kerbolButton) {
@@ -287,6 +291,19 @@ if (kerbolButton) {
         showInfo(kerbol);
     });
 }
+
+// Open credits
+creditsButton.addEventListener("click", () => {
+        creditsPanel.classList.add(
+            "open");
+    }
+);
+
+// Close credits
+creditsClose.addEventListener("click", () => {
+    creditsPanel.classList.remove("open");
+    }
+);
 
 // Generate Stars
 // This section creates a star field background by generating multiple star elements with random properties.
