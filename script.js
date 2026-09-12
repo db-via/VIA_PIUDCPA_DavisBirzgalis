@@ -191,9 +191,12 @@ const planets = [
                 type: "Moon",
                 size: 32,
                 image: "images/moons/laythe.png",
-                description: "Placeholder information about Laythe.",
+                description: "The innermost of the five natural satellites of Jool. When Laythe was first discovered, it was not entered in the records because the scientist in charge thought he was looking at Kerbin. Laythe is the only moon in the Kerbol System with a significant atmosphere, and it is also the only celestial body besides Kerbin that has liquid oceans on its surface. The air does have a strange smell to it.",
                 stats: {
-                    Gravity: "Placeholder",
+                    "Equatorial Diameter": "1,000 km",
+                    "Surface Gravity": "7.85 m/s²",
+                    "Approximate Surface Temperature": "260 K",
+                    Atmosphere: "Thick, warm and breathable enough atmosphere. Sea-level pressure of 0.6 Atmospheres.",
                     Parent: "Jool"
                 },
                 audio: "audio/planet_ambiance/jool_moon.mp3"
@@ -204,9 +207,12 @@ const planets = [
                 type: "Moon",
                 size: 25,
                 image: "images/moons/vall.png",
-                description: "Placeholder information about Vall.",
+                description: "The second of the five natural satellites of Jool. Vall was one of the last Moons of Jool to be discovered. Frustrated scientists kept attempting to wipe it off the lenses of their telescopes. Eventually after a rash of returned telescopes, Advanced Optics Co. finally decided to just tell them it was an actual object in the sky. Topical similarities to the Mun and Minmus.",
                 stats: {
-                    Gravity: "Placeholder",
+                    "Equatorial Diameter": "600 km",
+                    "Surface Gravity": "2.31 m/s²",
+                    "Approximate Surface Temperature": "130 K",
+                    Atmosphere: "None",
                     Parent: "Jool"
                 },
                 audio: "audio/planet_ambiance/jool_moon.mp3"
@@ -217,9 +223,12 @@ const planets = [
                 type: "Moon",
                 size: 31,
                 image: "images/moons/tylo.png",
-                description: "Placeholder information about Tylo.",
+                description: "The largest moon of Jool and the Kerbol System, and the largest celestial body without an atmosphere. Tylo was the first moon of Jool to be discovered by the Kerbal Astronomical Society. Similar gravity to Kerbin, but with no atmosphere, which makes it a difficult target for interplanetary missions.",
                 stats: {
-                    Gravity: "Placeholder",
+                    "Equatorial Diameter": "1,200 km",
+                    "Surface Gravity": "7.85 m/s²",
+                    "Approximate Surface Temperature": "200 K",
+                    Atmosphere: "None",
                     Parent: "Jool"
                 },
                 audio: "audio/planet_ambiance/jool_moon.mp3"
@@ -230,9 +239,12 @@ const planets = [
                 type: "Moon",
                 size: 13,
                 image: "images/moons/bop.png",
-                description: "Placeholder information about Bop.",
+                description: "One of the five natural satellites of Jool. Bop is a small moon in the vicinity of Jool. In Kerbal mythology, Bop is believed to be the home of the Kraken, a mischievous creature said to play with the ships of hapless explorers, by spinning them out of control until torn asunder, then casting them into oblivion. Comparable to Minmus.",
                 stats: {
-                    Gravity: "Placeholder",
+                    "Equatorial Diameter": "130 km",
+                    "Surface Gravity": "0.589 m/s²",
+                    "Approximate Surface Temperature": "180 K",
+                    Atmosphere: "None",
                     Parent: "Jool"
                 },
                 audio: "audio/planet_ambiance/jool_moon.mp3"
@@ -243,9 +255,12 @@ const planets = [
                 type: "Moon",
                 size: 16,
                 image: "images/moons/pol.png",
-                description: "Placeholder information about Pol.",
+                description: "The smallest of the five natural satellites of Jool. This moon was especially hard to spot, as it looks just like a pollen grain, particularly when observed through telescopes based near dusty fields. Pol was finally discovered when someone decided to write down the location of the pollen, and noticed that it was moving in a way that pollen grains do not. Comparable to Gilly.",
                 stats: {
-                    Gravity: "Placeholder",
+                    "Equatorial Diameter": "88 km",
+                    "Surface Gravity": "0.373 m/s²",
+                    "Approximate Surface Temperature": "110 K",
+                    Atmosphere: "None",
                     Parent: "Jool"
                 },
                 audio: "audio/planet_ambiance/jool_moon.mp3"
