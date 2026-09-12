@@ -38,8 +38,8 @@ const planets = [
         stats: {
             "Equatorial Diameter": "3,030 km",
             "Surface Gravity": "2.67 m/s²",
-            Atmosphere: "None",
-            "Approximate Surface Temperature": "573 K"
+            "Approximate Surface Temperature": "573 K",
+            Atmosphere: "None"
         },
         audio: "audio/planet_ambiance/moho.mp3"
     },
@@ -128,11 +128,12 @@ const planets = [
         x: 41,
         size: 47,
         image: "images/planets/duna.png",
-        description: "Placeholder information about Duna.",
+        description: "Fourth planet from Kerbol. Known as the red dot that you can see if you squint at it really hard, Duna has long been a wonder to Kerbalkind. The planet has been held in much awe, due to its striking red color and stark contrast to the color green. Duna orbits Kerbol with an inclination nearly identical to that of Kerbin, making it a prime target for interplanetary missions. Duna has one moon, Ike.",
         stats: {
-            Diameter: "Placeholder",
-            Gravity: "Placeholder",
-            Atmosphere: "Placeholder"
+            "Equatorial Diameter": "640 km",
+            "Surface Gravity": "2.94 m/s²",
+            "Approximate Surface Temperature": "200 K",
+            Atmosphere: "Thin, cool atmosphere. Sea-level pressure of 0.067 Atmospheres."
         },
         audio: "audio/planet_ambiance/duna.mp3",
 
@@ -142,10 +143,10 @@ const planets = [
                 type: "Moon",
                 size: 16,
                 image: "images/moons/ike.png",
-                description: "Placeholder information about Ike.",
+                description: "Ike is a relatively large, grey object occasionally seen orbiting Duna. Scientists have postulated that Ike is seemingly perfectly positioned to sneakily interfere with any object that presumes to come orbiting near its parent.",
                 stats: {
-                    Diameter: "Placeholder",
-                    Gravity: "Placeholder",
+                    "Equatorial Diameter": "260 km",
+                    "Surface Gravity": "1.10 m/s²",
                     Parent: "Duna"
                 },
                 audio: "audio/planet_ambiance/ike.mp3"
@@ -159,11 +160,12 @@ const planets = [
         x: 53,
         size: 30,
         image: "images/planets/dres.png",
-        description: "Placeholder information about Dres.",
+        description: "Dres is a very small planet. It was the first planet considered to be a dwarf. Its orbit is highly irregular and, together with its size, it took a long time to discover since half the time it was not where scientists expected to find a planet. Due to its nature of frequenting the bad parts of space, this dwarf planet was officially labeled as “Not to be trusted” by the scientific community.",
         stats: {
-            Diameter: "Placeholder",
-            Gravity: "Placeholder",
-            Atmosphere: "Placeholder"
+            "Equatorial Diameter": "276 km",
+            "Surface Gravity": "1.13 m/s²",
+            "Approximate Surface Temperature": "160 K",
+            Atmosphere: "None"
         },
         audio: "audio/planet_ambiance/dres.mp3"
     },
@@ -174,11 +176,12 @@ const planets = [
         x: 69,
         size: 190,
         image: "images/planets/jool.png",
-        description: "Placeholder information about Jool.",
+        description: "Jool is particularly known for being a rather large, predominantly green planet. Kerbalkind has longed to visit it since it was first spotted in the sky. Philosophers reason that the swirling green planet must be a really nice place to visit, on account of its wholesome coloration. If you look at Jool through a telescope, it is fuzzy. Jool has the largest diameter and greatest mass of all celestial bodies in the Kerbol System. It has five moons, Laythe, Vall, Tylo, Bop and Pol.",
         stats: {
-            Diameter: "Placeholder",
-            Gravity: "Placeholder",
-            Atmosphere: "Placeholder"
+            "Equatorial Diameter": "12,000 km",
+            "Surface Gravity": "7.85 m/s²",
+            "Approximate Surface Temperature": "200 K",
+            Atmosphere: "Extremely dense, cold atmosphere. Atmospheric pressure of 1 Atmosphere, sea-level pressure of 15 Atmospheres."
         },
         audio: "audio/planet_ambiance/jool.mp3",
 
