@@ -52,7 +52,7 @@ const planets = [
         image: "images/planets/eve.png",
         description: "Second planet from Kerbol. It is considered by some to be almost a sister planet to Kerbin. Well, despite the purple, and the toxic atmosphere, and the extreme pressures and temperatures. Actually, it is not very similar at all, is it? Eve has the greatest surface gravity of all the planets, and the second highest escape velocity. It is also the only planet with a significant atmosphere that is not breathable by Kerbals. Eve has one moon, Gilly, which is a small, irregularly shaped body with very low gravity.",
         stats: {
-            "Equatorial Diameter": "7,176 km",
+            "Equatorial Diameter": "1,400 km",
             "Surface Gravity": "8.90 m/s²",
             "Approximate Surface Temperature": "408 K",
             Atmosphere: "Extremely thick and dense. Sea-level pressure of 5 Atmospheres."
@@ -82,11 +82,12 @@ const planets = [
         x: 30,
         size: 66,
         image: "images/planets/kerbin.png",
-        description: "Placeholder information about Kerbin.",
+        description: "A unique world, Kerbin has flat plains, soaring mountains and wide, blue oceans. Home to the Kerbals, it has just the right conditions to support a vast, seemingly undepletable population of the eager green creatures. Kerbin has two natural satellites, Mun and Minmus.",
         stats: {
-            "Equatorial Diameter": "Placeholder",
-            "Surface Gravity": "Placeholder",
-            Atmosphere: "Placeholder"
+            "Equatorial Diameter": "1,200 km",
+            "Surface Gravity": "9.81 m/s²",
+            "Approximate Surface Temperature": "288 K",
+            Atmosphere: "Thick, warm and breathable atmosphere. Sea-level pressure of 1 Atmosphere."
         },
         audio: "audio/planet_ambiance/kerbin.mp3",
 
@@ -96,10 +97,10 @@ const planets = [
                 type: "Moon",
                 size: 15,
                 image: "images/moons/mun.png",
-                description: "Placeholder information about Mun.",
+                description: "A large satellite orbiting Kerbin. It is mostly gray in appearance, with craters of various sizes dotting its otherwise smooth surface. The Mun’s discovery is widely regarded as one of the more important breakthroughs of Kerbal evolution.",
                 stats: {
-                    Diameter: "Placeholder",
-                    Gravity: "Placeholder",
+                    "Equatorial Diameter": "400 km",
+                    "Surface Gravity": "1.63 m/s²",
                     Parent: "Kerbin"
                 },
                 audio: "audio/planet_ambiance/Kerbin_moon.mp3"
@@ -110,10 +111,10 @@ const planets = [
                 type: "Moon",
                 size: 10,
                 image: "images/moons/minmus.png",
-                description: "Placeholder information about Minmus.",
+                description: "The smallest moon orbiting Kerbin. From the surface of Kerbin, it can be seen on clear days as a tiny blue speck in the sky. It is often mistaken as dirt on telescope lenses or dead pixels, but the top minds at the Kerbal Astronomical Society assure us it is a real moon nevertheless.",
                 stats: {
-                    Diameter: "Placeholder",
-                    Gravity: "Placeholder",
+                    "Equatorial Diameter": "120 km",
+                    "Surface Gravity": "0.491 m/s²",
                     Parent: "Kerbin"
                 },
                 audio: "audio/planet_ambiance/Kerbin_moon.mp3"
