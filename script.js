@@ -13,7 +13,6 @@ const kerbol = {
     stats: {
         Diameter: "523,200 km",
         "Equatorial Circumference": "1,643,362 km",
-        Mass: "Placeholder",
         Temperature: "5,840 K",
         "Star Type": "Does Not Fit Any Stellar Classification?",
         "Number of Planets": "5",
