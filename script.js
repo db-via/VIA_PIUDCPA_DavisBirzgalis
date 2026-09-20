@@ -198,7 +198,7 @@ const planets = [
                     Atmosphere: "Thick, warm and breathable enough atmosphere. Sea-level pressure of 0.6 Atmospheres.",
                     Parent: "Jool"
                 },
-                audio: "audio/planet_ambiance/jool_moon.mp3"
+                audio: "audio/planet_ambiance/Laythe.mp3"
             },
 
             {
@@ -214,7 +214,7 @@ const planets = [
                     Atmosphere: "None",
                     Parent: "Jool"
                 },
-                audio: "audio/planet_ambiance/jool_moon.mp3"
+                audio: "audio/planet_ambiance/Vall.mp3"
             },
 
             {
@@ -230,7 +230,7 @@ const planets = [
                     Atmosphere: "None",
                     Parent: "Jool"
                 },
-                audio: "audio/planet_ambiance/jool_moon.mp3"
+                audio: "audio/planet_ambiance/Tylo.mp3"
             },
 
             {
@@ -246,7 +246,7 @@ const planets = [
                     Atmosphere: "None",
                     Parent: "Jool"
                 },
-                audio: "audio/planet_ambiance/jool_moon.mp3"
+                audio: "audio/planet_ambiance/Bop.mp3"
             },
 
             {
@@ -262,7 +262,7 @@ const planets = [
                     Atmosphere: "None",
                     Parent: "Jool"
                 },
-                audio: "audio/planet_ambiance/jool_moon.mp3"
+                audio: "audio/planet_ambiance/Pol.mp3"
             }
         ]
     },
