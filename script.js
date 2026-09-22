@@ -8,7 +8,7 @@ const kerbol = {
         "images/planets/kerbol.png",
 
     description:
-        "Parent Star of the Kerbol System. It is the most well known object in the daytime sky. Scientists have noted a particular burning sensation and potential loss of vision if it is stared at for long periods of time. Impossible to land on, but not tested during nighttime or in winter.",
+        "Parent Star of the Kerbol System. It is the most well known object in the daytime sky. Scientists have noted a particular burning sensation and potential loss of vision if it is stared at for long periods of time. Impossible to land on, but not tested during nighttime.",
 
     stats: {
         Diameter: "523,200 km",
@@ -33,10 +33,10 @@ const planets = [
         x: 13,
         size: 25,
         image: "images/planets/moho.png",
-        description: "Moho figures in Kerbal mythology as a fiery place with oceans of flowing lava. In reality however, it's much less interesting. Scientists speculate about possible ways to make it awesome like in the stories. Some of those ideas have led to new breakthroughs in aerospace technology. Inclined, eccentric orbit with no atmposhere, alongside with the close proximity to Kerbol, makes it a difficult target for interplanetary missions.",
+        description: "Third smallest and closest planet to Kerbol. Moho figures in Kerbal mythology as a fiery place with oceans of flowing lava. In reality however, it's much less interesting. Scientists speculate about possible ways to make it awesome like in the stories. Some of those ideas have led to new breakthroughs in aerospace technology. Inclined, eccentric orbit with no atmposhere, alongside with the close proximity to Kerbol, makes it a difficult target for interplanetary missions.",
         stats: {
             "Equatorial Diameter": "3,030 km",
-            "Surface Gravity": "2.70 m/s²",
+            "Surface Gravity": "2.67 m/s²",
             "Approximate Surface Temperature": "573 K",
             Atmosphere: "None"
         },
@@ -49,11 +49,11 @@ const planets = [
         x: 20,
         size: 88,
         image: "images/planets/eve.png",
-        description: "It is considered by some to be almost a sister planet to Kerbin. Well, despite the purple, and the toxic atmosphere, and the extreme pressures and temperatures. Actually, it is not very similar at all, is it? It is the only planet with a walkable surface that has a significant atmosphere which is not breathable by Kerbals. Eve has one moon, Gilly.",
+        description: "Second planet from Kerbol. It is considered by some to be almost a sister planet to Kerbin. Well, despite the purple, and the toxic atmosphere, and the extreme pressures and temperatures. Actually, it is not very similar at all, is it? Eve has the greatest surface gravity of all the planets, and the second highest escape velocity. It is also the only planet with a significant atmosphere that is not breathable by Kerbals. Eve has one moon, Gilly, which is a small, irregularly shaped body with very low gravity.",
         stats: {
             "Equatorial Diameter": "1,400 km",
-            "Surface Gravity": "16.7 m/s²",
-            "Amount of Purple": "The Purplest Object.",
+            "Surface Gravity": "8.90 m/s²",
+            "Approximate Surface Temperature": "408 K",
             Atmosphere: "Extremely thick and dense. Sea-level pressure of 5 Atmospheres."
         },
         audio: "audio/planet_ambiance/eve.mp3",
@@ -64,11 +64,10 @@ const planets = [
                 type: "Moon",
                 size: 12,
                 image: "images/moons/gilly.png",
-                description: "Gilly is a lumpy rock wandering around the orbit of Eve. It’s by far the smallest natural satellite and celestial body that the Kerbal Astronomical Society has discovered. Due to the large amount of squinting and eye strain associated with its discovery, wearing glasses has now become synonymous with being an accomplished Astronomer.",
+                description: "The only natural satellite of Eve and smallest celestial body in the Kerbol System. Due to the large amount of squinting and eye strain associated with its discovery, wearing glasses has now become synonymous with being an accomplished Astronomer. This moon is also considered to be an captured asteroid.",
                 stats: {
                     "Approximate Equatorial Diameter": "26 km",
                     "Surface Gravity": "0.05 m/s²",
-                    "Interestable?": "As interesting as its gravity allows it to be.",
                     Parent: "Eve"
                 },
                 audio: "audio/planet_ambiance/gilly.mp3"
@@ -87,7 +86,6 @@ const planets = [
             "Equatorial Diameter": "1,200 km",
             "Surface Gravity": "9.81 m/s²",
             "Approximate Surface Temperature": "288 K",
-            "Signs of Life": "Stupid, Courageous and Eyelid-less Kerbals",
             Atmosphere: "Thick, warm and breathable atmosphere. Sea-level pressure of 1 Atmosphere."
         },
         audio: "audio/planet_ambiance/kerbin.mp3",
@@ -115,8 +113,7 @@ const planets = [
                 description: "The smallest moon orbiting Kerbin. From the surface of Kerbin, it can be seen on clear days as a tiny blue speck in the sky. It is often mistaken as dirt on telescope lenses or dead pixels, but the top minds at the Kerbal Astronomical Society assure us it is a real moon nevertheless.",
                 stats: {
                     "Equatorial Diameter": "120 km",
-                    "Surface Gravity": "0.49 m/s²",
-                    "Edibility": "Ice Cream appearance, surface samples not edible.",
+                    "Surface Gravity": "0.491 m/s²",
                     Parent: "Kerbin"
                 },
                 audio: "audio/planet_ambiance/Kerbin_moon.mp3"
@@ -130,12 +127,12 @@ const planets = [
         x: 41,
         size: 47,
         image: "images/planets/duna.png",
-        description: "Known as the red dot that you can see if you squint at it really hard, Duna has long been a wonder to Kerbalkind. The planet has been held in much awe, due to its striking red color and stark contrast to the color green. Duna orbits Kerbol with an inclination nearly identical to that of Kerbin, making it a prime target for interplanetary missions. Duna has one moon, Ike.",
+        description: "Fourth planet from Kerbol. Known as the red dot that you can see if you squint at it really hard, Duna has long been a wonder to Kerbalkind. The planet has been held in much awe, due to its striking red color and stark contrast to the color green. Duna orbits Kerbol with an inclination nearly identical to that of Kerbin, making it a prime target for interplanetary missions. Duna has one moon, Ike.",
         stats: {
             "Equatorial Diameter": "640 km",
             "Surface Gravity": "2.94 m/s²",
-            "Martian Presence": "What's a Mars?",
-            Atmosphere: "Thin, cool atmosphere."
+            "Approximate Surface Temperature": "200 K",
+            Atmosphere: "Thin, cool atmosphere. Sea-level pressure of 0.067 Atmospheres."
         },
         audio: "audio/planet_ambiance/duna.mp3",
 
@@ -162,11 +159,11 @@ const planets = [
         x: 53,
         size: 30,
         image: "images/planets/dres.png",
-        description: "Dres is a very small planet. It was the first planet considered to be a dwarf. Its orbit is highly irregular and, together with its size, it took a long time to discover since half the time it was not where scientists expected to find a planet. Due to its nature of frequenting the bad parts of space, this dwarf planet was officially labeled as “Not to be trusted” by the scientific community. Some astronomers have also noticed variations in gravitational measurements around Dres. While only slight, perhaps there is something more to this gray dwarf.",
+        description: "Dres is a very small planet. It was the first planet considered to be a dwarf. Its orbit is highly irregular and, together with its size, it took a long time to discover since half the time it was not where scientists expected to find a planet. Due to its nature of frequenting the bad parts of space, this dwarf planet was officially labeled as “Not to be trusted” by the scientific community.",
         stats: {
             "Equatorial Diameter": "276 km",
             "Surface Gravity": "1.13 m/s²",
-            "Plausability of Existence": "~50%",
+            "Approximate Surface Temperature": "160 K",
             Atmosphere: "None"
         },
         audio: "audio/planet_ambiance/dres.mp3"
@@ -178,12 +175,12 @@ const planets = [
         x: 69,
         size: 190,
         image: "images/planets/jool.png",
-        description: "Jool is particularly known for being a rather large, predominantly green planet. Kerbalkind has longed to visit it since it was first spotted in the sky. Philosophers reason that the swirling green planet must be a really nice place to visit, on account of its wholesome coloration. If you look at Jool through a telescope, it is fuzzy. Jool has the largest diameter and greatest mass of all planets in the Kerbol System. It has five moons, Laythe, Vall, Tylo, Bop and Pol.",
+        description: "Jool is particularly known for being a rather large, predominantly green planet. Kerbalkind has longed to visit it since it was first spotted in the sky. Philosophers reason that the swirling green planet must be a really nice place to visit, on account of its wholesome coloration. If you look at Jool through a telescope, it is fuzzy. Jool has the largest diameter and greatest mass of all celestial bodies in the Kerbol System. It has five moons, Laythe, Vall, Tylo, Bop and Pol.",
         stats: {
             "Equatorial Diameter": "12,000 km",
             "Surface Gravity": "7.85 m/s²",
-            "Possibility of Surface": "How do you land on a gas giant?",
-            Atmosphere: "Extremely dense, cold atmosphere."
+            "Approximate Surface Temperature": "200 K",
+            Atmosphere: "Extremely dense, cold atmosphere. Atmospheric pressure of 1 Atmosphere, sea-level pressure of 15 Atmospheres."
         },
         audio: "audio/planet_ambiance/jool.mp3",
 
@@ -193,12 +190,12 @@ const planets = [
                 type: "Moon",
                 size: 32,
                 image: "images/moons/laythe.png",
-                description: "When Laythe was first discovered, it was not entered in the records because the scientist in charge thought he was looking at Kerbin. Luckily this error was corrected when a plucky intern informed him that “telescopes don’t work that way”. Laythe is the only moon in the Kerbol System with a significant atmosphere, and it is also the only celestial body besides Kerbin that has liquid oceans on its surface. The air does have a strange smell to it.",
+                description: "The innermost of the five natural satellites of Jool. When Laythe was first discovered, it was not entered in the records because the scientist in charge thought he was looking at Kerbin. Laythe is the only moon in the Kerbol System with a significant atmosphere, and it is also the only celestial body besides Kerbin that has liquid oceans on its surface. The air does have a strange smell to it.",
                 stats: {
                     "Equatorial Diameter": "1,000 km",
                     "Surface Gravity": "7.85 m/s²",
-                    "Radioactivity": "High levels of Radiation due to Jool.",
-                    Atmosphere: "Thick, warm and breathable enough atmosphere.",
+                    "Approximate Surface Temperature": "260 K",
+                    Atmosphere: "Thick, warm and breathable enough atmosphere. Sea-level pressure of 0.6 Atmospheres.",
                     Parent: "Jool"
                 },
                 audio: "audio/planet_ambiance/Laythe.mp3"
@@ -209,10 +206,11 @@ const planets = [
                 type: "Moon",
                 size: 25,
                 image: "images/moons/vall.png",
-                description: "Vall was one of the last Moons of Jool to be discovered. Frustrated scientists kept attempting to wipe it off the lenses of their telescopes. Eventually after a rash of returned telescopes, Advanced Optics Co. finally decided to just tell them it was an actual object in the sky. Topical similarities to the Mun and Minmus.",
+                description: "The second of the five natural satellites of Jool. Vall was one of the last Moons of Jool to be discovered. Frustrated scientists kept attempting to wipe it off the lenses of their telescopes. Eventually after a rash of returned telescopes, Advanced Optics Co. finally decided to just tell them it was an actual object in the sky. Topical similarities to the Mun and Minmus.",
                 stats: {
                     "Equatorial Diameter": "600 km",
                     "Surface Gravity": "2.31 m/s²",
+                    "Approximate Surface Temperature": "130 K",
                     Atmosphere: "None",
                     Parent: "Jool"
                 },
@@ -228,7 +226,7 @@ const planets = [
                 stats: {
                     "Equatorial Diameter": "1,200 km",
                     "Surface Gravity": "7.85 m/s²",
-                    "Crater Names": "Gagarin, Galileo, Gris- Who are these people?",
+                    "Approximate Surface Temperature": "200 K",
                     Atmosphere: "None",
                     Parent: "Jool"
                 },
@@ -240,11 +238,11 @@ const planets = [
                 type: "Moon",
                 size: 13,
                 image: "images/moons/bop.png",
-                description: "Bop is a small moon in the vicinity of Jool. In Kerbal mythology, Bop is believed to be the home of the Kraken, a mischievous creature said to play with the ships of hapless explorers, by spinning them out of control until torn asunder, then casting them into oblivion. Comparable to Minmus.",
+                description: "One of the five natural satellites of Jool. Bop is a small moon in the vicinity of Jool. In Kerbal mythology, Bop is believed to be the home of the Kraken, a mischievous creature said to play with the ships of hapless explorers, by spinning them out of control until torn asunder, then casting them into oblivion. Comparable to Minmus.",
                 stats: {
                     "Equatorial Diameter": "130 km",
                     "Surface Gravity": "0.589 m/s²",
-                    "Kraken Presence": "We don't talk about it.",
+                    "Approximate Surface Temperature": "180 K",
                     Atmosphere: "None",
                     Parent: "Jool"
                 },
@@ -256,10 +254,11 @@ const planets = [
                 type: "Moon",
                 size: 16,
                 image: "images/moons/pol.png",
-                description: "This moon was especially hard to spot, as it looks just like a pollen grain, particularly when observed through telescopes based near dusty fields. Pol was finally discovered when someone decided to write down the location of the pollen, and noticed that it was moving in a way that pollen grains do not. Comparable to Gilly.",
+                description: "The smallest of the five natural satellites of Jool. This moon was especially hard to spot, as it looks just like a pollen grain, particularly when observed through telescopes based near dusty fields. Pol was finally discovered when someone decided to write down the location of the pollen, and noticed that it was moving in a way that pollen grains do not. Comparable to Gilly.",
                 stats: {
                     "Equatorial Diameter": "88 km",
                     "Surface Gravity": "0.373 m/s²",
+                    "Approximate Surface Temperature": "110 K",
                     Atmosphere: "None",
                     Parent: "Jool"
                 },
@@ -279,7 +278,7 @@ const planets = [
             "Equatorial Diameter": "420 km",
             "Surface Gravity": "1.69 m/s²",
             "Approximate Surface Temperature": "100 K",
-            Atmosphere: "Teneous atmospheric coating."
+            Atmosphere: "None"
         },
         audio: "audio/planet_ambiance/eeloo.mp3"
     }
