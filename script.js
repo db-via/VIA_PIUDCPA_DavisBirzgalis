@@ -3,13 +3,9 @@
 const kerbol = {
     name: "Kerbol",
     type: "Star",
-
-    image:
-        "images/planets/kerbol.png",
-
-    description:
-        "Parent Star of the Kerbol System. It is the most well known object in the daytime sky. Scientists have noted a particular burning sensation and potential loss of vision if it is stared at for long periods of time. Impossible to land on, but not tested during nighttime or in winter.",
-
+    image: "images/planets/kerbol.png",
+    wiki: "https://wiki.kerbalspaceprogram.com/wiki/Kerbol",
+    description: "Parent Star of the Kerbol System. It is the most well known object in the daytime sky. Scientists have noted a particular burning sensation and potential loss of vision if it is stared at for long periods of time. Impossible to land on, but not tested during nighttime or in winter.",
     stats: {
         Diameter: "523,200 km",
         "Equatorial Circumference": "1,643,362 km",
@@ -18,9 +14,7 @@ const kerbol = {
         "Number of Planets": "5",
         "Number of Dwarf Planets:": "2",
     },
-
-    audio:
-        "audio/planet_ambiance/kerbol.mp3"
+    audio: "audio/planet_ambiance/kerbol.mp3"
 };
 
 // Planets and Moons
@@ -33,6 +27,7 @@ const planets = [
         x: 13,
         size: 25,
         image: "images/planets/moho.png",
+        wiki: "https://wiki.kerbalspaceprogram.com/wiki/Moho",
         description: "Moho figures in Kerbal mythology",
         stats: {
             "Equatorial Diameter": "3,030 km",
@@ -49,6 +44,7 @@ const planets = [
         x: 20,
         size: 88,
         image: "images/planets/eve.png",
+        wiki: "https://wiki.kerbalspaceprogram.com/wiki/Eve",
         description: "It is considered by some to be almost a sister planet to Kerbin. Well, despite the purple, and the toxic atmosphere, and the extreme pressures and temperatures. Actually, it is not very similar at all, is it? It is the only planet with a walkable surface that has a significant atmosphere which is not breathable by Kerbals. Eve has one moon, Gilly.",
         stats: {
             "Equatorial Diameter": "1,400 km",
@@ -64,6 +60,7 @@ const planets = [
                 type: "Moon",
                 size: 12,
                 image: "images/moons/gilly.png",
+                wiki: "https://wiki.kerbalspaceprogram.com/wiki/Gilly",
                 description: "Gilly is a lumpy rock wandering around the orbit of Eve. It’s by far the smallest natural satellite and celestial body that the Kerbal Astronomical Society has discovered. Due to the large amount of squinting and eye strain associated with its discovery, wearing glasses has now become synonymous with being an accomplished Astronomer.",
                 stats: {
                     "Approximate Equatorial Diameter": "26 km",
@@ -82,6 +79,7 @@ const planets = [
         x: 30,
         size: 66,
         image: "images/planets/kerbin.png",
+        wiki: "https://wiki.kerbalspaceprogram.com/wiki/Kerbin",
         description: "A unique world, Kerbin has flat plains, soaring mountains and wide, blue oceans. Home to the Kerbals, it has just the right conditions to support a vast, seemingly undepletable population of the eager green creatures. Kerbin has two natural satellites, Mun and Minmus.",
         stats: {
             "Equatorial Diameter": "1,200 km",
@@ -98,6 +96,7 @@ const planets = [
                 type: "Moon",
                 size: 15,
                 image: "images/moons/mun.png",
+                wiki: "https://wiki.kerbalspaceprogram.com/wiki/Mun",
                 description: "A large satellite orbiting Kerbin. It is mostly gray in appearance, with craters of various sizes dotting its otherwise smooth surface. The Mun’s discovery is widely regarded as one of the more important breakthroughs of Kerbal evolution.",
                 stats: {
                     "Equatorial Diameter": "400 km",
@@ -112,6 +111,7 @@ const planets = [
                 type: "Moon",
                 size: 10,
                 image: "images/moons/minmus.png",
+                wiki: "https://wiki.kerbalspaceprogram.com/wiki/Minmus",
                 description: "The smallest moon orbiting Kerbin. From the surface of Kerbin, it can be seen on clear days as a tiny blue speck in the sky. It is often mistaken as dirt on telescope lenses or dead pixels, but the top minds at the Kerbal Astronomical Society assure us it is a real moon nevertheless.",
                 stats: {
                     "Equatorial Diameter": "120 km",
@@ -130,6 +130,7 @@ const planets = [
         x: 41,
         size: 47,
         image: "images/planets/duna.png",
+        wiki: "https://wiki.kerbalspaceprogram.com/wiki/Duna",
         description: "Known as the red dot that you can see if you squint at it really hard, Duna has long been a wonder to Kerbalkind. The planet has been held in much awe, due to its striking red color and stark contrast to the color green. Duna orbits Kerbol with an inclination nearly identical to that of Kerbin, making it a prime target for interplanetary missions. Duna has one moon, Ike.",
         stats: {
             "Equatorial Diameter": "640 km",
@@ -145,6 +146,7 @@ const planets = [
                 type: "Moon",
                 size: 16,
                 image: "images/moons/ike.png",
+                wiki: "https://wiki.kerbalspaceprogram.com/wiki/Ike",
                 description: "Ike is a relatively large, grey object occasionally seen orbiting Duna. Scientists have postulated that Ike is seemingly perfectly positioned to sneakily interfere with any object that presumes to come orbiting near its parent.",
                 stats: {
                     "Equatorial Diameter": "260 km",
@@ -162,6 +164,7 @@ const planets = [
         x: 53,
         size: 30,
         image: "images/planets/dres.png",
+        wiki: "https://wiki.kerbalspaceprogram.com/wiki/Dres",
         description: "Dres is a very small planet. It was the first planet considered to be a dwarf. Its orbit is highly irregular and, together with its size, it took a long time to discover since half the time it was not where scientists expected to find a planet. Due to its nature of frequenting the bad parts of space, this dwarf planet was officially labeled as “Not to be trusted” by the scientific community. Some astronomers have also noticed variations in gravitational measurements around Dres. While only slight, perhaps there is something more to this gray dwarf.",
         stats: {
             "Equatorial Diameter": "276 km",
@@ -178,6 +181,7 @@ const planets = [
         x: 69,
         size: 190,
         image: "images/planets/jool.png",
+        wiki: "https://wiki.kerbalspaceprogram.com/wiki/Jool",
         description: "Jool is particularly known for being a rather large, predominantly green planet. Kerbalkind has longed to visit it since it was first spotted in the sky. Philosophers reason that the swirling green planet must be a really nice place to visit, on account of its wholesome coloration. If you look at Jool through a telescope, it is fuzzy. Jool has the largest diameter and greatest mass of all planets in the Kerbol System. It has five moons, Laythe, Vall, Tylo, Bop and Pol.",
         stats: {
             "Equatorial Diameter": "12,000 km",
@@ -193,6 +197,7 @@ const planets = [
                 type: "Moon",
                 size: 32,
                 image: "images/moons/laythe.png",
+                wiki: "https://wiki.kerbalspaceprogram.com/wiki/Laythe",
                 description: "When Laythe was first discovered, it was not entered in the records because the scientist in charge thought he was looking at Kerbin. Luckily this error was corrected when a plucky intern informed him that “telescopes don’t work that way”. Laythe is the only moon in the Kerbol System with a significant atmosphere, and it is also the only celestial body besides Kerbin that has liquid oceans on its surface. The air does have a strange smell to it.",
                 stats: {
                     "Equatorial Diameter": "1,000 km",
@@ -209,6 +214,7 @@ const planets = [
                 type: "Moon",
                 size: 25,
                 image: "images/moons/vall.png",
+                wiki: "https://wiki.kerbalspaceprogram.com/wiki/Vall",
                 description: "Vall was one of the last Moons of Jool to be discovered. Frustrated scientists kept attempting to wipe it off the lenses of their telescopes. Eventually after a rash of returned telescopes, Advanced Optics Co. finally decided to just tell them it was an actual object in the sky. Topical similarities to the Mun and Minmus.",
                 stats: {
                     "Equatorial Diameter": "600 km",
@@ -224,6 +230,7 @@ const planets = [
                 type: "Moon",
                 size: 31,
                 image: "images/moons/tylo.png",
+                wiki: "https://wiki.kerbalspaceprogram.com/wiki/Tylo",
                 description: "The largest moon of Jool and the Kerbol System, and the largest celestial body without an atmosphere. Tylo was the first moon of Jool to be discovered by the Kerbal Astronomical Society. Similar gravity to Kerbin, but with no atmosphere, which makes it a difficult target for interplanetary missions.",
                 stats: {
                     "Equatorial Diameter": "1,200 km",
@@ -240,6 +247,7 @@ const planets = [
                 type: "Moon",
                 size: 13,
                 image: "images/moons/bop.png",
+                wiki: "https://wiki.kerbalspaceprogram.com/wiki/Bop",
                 description: "Bop is a small moon in the vicinity of Jool. In Kerbal mythology, Bop is believed to be the home of the Kraken, a mischievous creature said to play with the ships of hapless explorers, by spinning them out of control until torn asunder, then casting them into oblivion. Comparable to Minmus.",
                 stats: {
                     "Equatorial Diameter": "130 km",
@@ -256,6 +264,7 @@ const planets = [
                 type: "Moon",
                 size: 16,
                 image: "images/moons/pol.png",
+                wiki: "https://wiki.kerbalspaceprogram.com/wiki/Pol",
                 description: "This moon was especially hard to spot, as it looks just like a pollen grain, particularly when observed through telescopes based near dusty fields. Pol was finally discovered when someone decided to write down the location of the pollen, and noticed that it was moving in a way that pollen grains do not. Comparable to Gilly.",
                 stats: {
                     "Equatorial Diameter": "88 km",
@@ -274,6 +283,7 @@ const planets = [
         x: 91,
         size: 25,
         image: "images/planets/eeloo.png",
+        wiki: "https://wiki.kerbalspaceprogram.com/wiki/Eeloo",
         description: "There’s been a considerable amount of controversy around the status of Eeloo as being a proper planet or a just a “lump of ice going around the sun”. The debate is still ongoing, as most academic summits held to address the issue have devolved into, on good days, petty name calling, and on worse ones, all-out brawls. Nevertheless, it is one of the most distant objects in the Kerbol System, and is a small, icy world with a highly eccentric orbit.",
         stats: {
             "Equatorial Diameter": "420 km",
@@ -483,6 +493,14 @@ function showInfo(body) {
 
     infoImage.src = body.image || "";
     infoImage.alt = body.name || "";
+
+    infoImage.onclick = () => {
+        if (body.wiki) {
+            window.open(body.wiki, "_blank");
+        }
+    };
+
+    infoImage.style.cursor = body.wiki ? "pointer" : "default";
 
     infoName.textContent = body.name || "Unknown";
     infoType.textContent = body.type || "Celestial Body";
