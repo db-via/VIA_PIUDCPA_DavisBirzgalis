@@ -8,7 +8,7 @@ const kerbol = {
         "images/planets/kerbol.png",
 
     description:
-        "Parent Star of the Kerbol System. It is the most well known object in the daytime sky. Scientists have noted a particular burning sensation and potential loss of vision if it is stared at for long periods of time. Impossible to land on, but not tested during nighttime.",
+        "Parent Star of the Kerbol System. It is the most well known object in the daytime sky. Scientists have noted a particular burning sensation and potential loss of vision if it is stared at for long periods of time.",
 
     stats: {
         Diameter: "523,200 km",
