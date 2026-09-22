@@ -308,7 +308,6 @@ const creditsPanel =document.getElementById("credits-panel");
 const creditsClose =document.getElementById("credits-close");
 
 // Button for Kerbol (Sun)
-// This section adds an event listener to the Kerbol button, allowing users to select it and view its information when clicked.
 if (kerbolButton) {
     kerbolButton.addEventListener("click", () => {
         selectBody(kerbolButton);
