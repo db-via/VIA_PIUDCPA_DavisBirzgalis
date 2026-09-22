@@ -33,7 +33,7 @@ const planets = [
         x: 13,
         size: 25,
         image: "images/planets/moho.png",
-        description: "Moho figures in Kerbal mythology as a fiery place with oceans of flowing lava. In reality however, it's much less interesting. Scientists speculate about possible ways to make it awesome like in the stories. Some of those ideas have led to new breakthroughs in aerospace technology. Inclined, eccentric orbit with no atmposhere, alongside with the close proximity to Kerbol, makes it a difficult target for interplanetary missions.",
+        description: "Moho figures in Kerbal mythology",
         stats: {
             "Equatorial Diameter": "3,030 km",
             "Surface Gravity": "2.70 m/s²",
