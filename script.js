@@ -482,7 +482,11 @@ function showInfo(body) {
     if (!infoPanel) return;
 
     infoImage.src = body.image || "";
-    infoImage.alt = body.name || "";
+    infoImage.alt = "Image of " + (body.name || "Unknown");
+    infoImage.onclick = () => {
+        console.log("Selected body: " + body.name);
+    };
+    infoImage.style.cursor = "zoom-in";
 
     infoName.textContent = body.name || "Unknown";
     infoType.textContent = body.type || "Celestial Body";
