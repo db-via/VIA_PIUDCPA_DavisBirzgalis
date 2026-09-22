@@ -81,7 +81,7 @@ const planets = [
         x: 30,
         size: 66,
         image: "images/planets/kerbin.png",
-        description: "A unique world, Kerbin has flat plains, soaring mountains and wide, blue oceans. Home to the Kerbals, it has just the right conditions to support a vast, seemingly undepletable population of the eager green creatures. Kerbin has two natural satellites, Mun and Minmus.",
+        description: "A unique world, Kerbin has flat plains, soaring mountains and wide, blue oceans. Home to the Kerbals, it has just the right conditions to support a vast, seemingly undepletable population of the eager green creatures.",
         stats: {
             "Equatorial Diameter": "1,200 km",
             "Surface Gravity": "9.81 m/s²",
