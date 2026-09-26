@@ -615,6 +615,18 @@ document.addEventListener("keydown", event => {
     ) {
         closeInfo();
     }
+
+    if (!infoPanel.classList.contains("open")) {
+        return;
+    }
+
+    if (event.key === "ArrowLeft") {
+        showPreviousBody();
+    }
+
+    if (event.key === "ArrowRight") {
+        showNextBody();
+    }
 });
 
 function showPreviousBody() {
