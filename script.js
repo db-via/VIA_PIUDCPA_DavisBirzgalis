@@ -506,7 +506,7 @@ function showInfo(body) {
 
     infoImage.style.cursor = body.wiki ? "pointer" : "default";
 
-    infoName.textContent = body.name || "Unknown";
+    infoName.textContent = "Selected: " + (body.name || "Unknown");
     infoType.textContent = body.type || "Celestial Body";
     infoDescription.textContent = body.description || "No description available.";
 
