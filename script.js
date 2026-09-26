@@ -608,10 +608,21 @@ if (infoClose) {
     infoClose.addEventListener("click", closeInfo);
 }
 
-// Close Info Panel on Escape Key
 document.addEventListener("keydown", event => {
     if (event.key === "Escape") {
         closeInfo();
+    }
+
+    if (!infoPanel.classList.contains("open")) {
+        return;
+    }
+
+    if (event.key === "ArrowLeft") {
+        showPreviousBody();
+    }
+
+    if (event.key === "ArrowRight") {
+        showNextBody();
     }
 });
 
