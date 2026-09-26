@@ -306,6 +306,8 @@ const infoClose = document.getElementById("info-close"); // The close button for
 
 const infoImage = document.getElementById("info-image"); // The image element in the information panel
 const infoName = document.getElementById("info-name"); // The name element in the information panel
+const infoPrev = document.getElementById("info-prev");
+const infoNext = document.getElementById("info-next");
 const infoType = document.getElementById("info-type"); // The type element in the information panel
 const infoDescription = document.getElementById("info-description"); // The description element in the information panel
 const infoStatistics = document.getElementById("info-statistics"); // The statistics element in the information panel
@@ -316,6 +318,16 @@ const ambientName = document.getElementById("ambient-name"); // The name element
 const creditsButton =document.getElementById("credits-button");
 const creditsPanel =document.getElementById("credits-panel");
 const creditsClose =document.getElementById("credits-close");
+
+const celestialBodies = [
+    kerbol,
+    ...planets.flatMap(planet => [
+        planet,
+        ...(planet.moons || [])
+    ])
+];
+
+let currentBodyIndex = 0;
 
 // Button for Kerbol (Sun)
 if (kerbolButton) {
@@ -491,6 +503,8 @@ function createMoons(system, planet) {
 function showInfo(body) {
     if (!infoPanel) return;
 
+    currentBodyIndex = celestialBodies.indexOf(body);
+
     infoImage.src = body.image || "";
     infoImage.alt = "Image of " + (body.name || "Unknown");
     infoImage.onclick = () => {
@@ -599,3 +613,26 @@ document.addEventListener("keydown", event => {
         closeInfo();
     }
 });
+
+function showPreviousBody() {
+    currentBodyIndex--;
+
+    if (currentBodyIndex < 0) {
+        currentBodyIndex = celestialBodies.length - 1;
+    }
+
+    showInfo(celestialBodies[currentBodyIndex]);
+}
+
+function showNextBody() {
+    currentBodyIndex++;
+
+    if (currentBodyIndex >= celestialBodies.length) {
+        currentBodyIndex = 0;
+    }
+
+    showInfo(celestialBodies[currentBodyIndex]);
+}
+
+infoPrev.addEventListener("click", showPreviousBody);
+infoNext.addEventListener("click", showNextBody);

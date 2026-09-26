@@ -920,6 +920,34 @@ body {
     font-weight: normal;
 }
 
+.info-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+
+    margin-bottom: 22px;
+}
+
+.info-navigation button {
+    flex: 1;
+
+    padding: 8px 10px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    color: rgba(255, 255, 255, 0.8);
+
+    cursor: pointer;
+}
+
+.info-navigation button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
 /* Description Styling */
 #info-description {
     margin:
