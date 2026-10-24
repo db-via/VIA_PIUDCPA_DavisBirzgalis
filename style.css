@@ -1102,3 +1102,58 @@ body {
 
     height: 36px;
 }
+
+#click-hint {
+    position: absolute;
+
+    left: 50%;
+    top: 25%;
+
+    transform:
+        translate(-50%, -50%);
+
+    padding:
+        10px
+        18px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.18);
+
+    border-radius: 12px;
+
+    background:
+        rgba(5, 8, 12, 0.8);
+
+    color:
+        rgba(255, 255, 255, 0.9);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 30px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    text-align: center;
+
+    pointer-events: none;
+
+    z-index: 75;
+
+    transition:
+        opacity 500ms ease,
+        transform 500ms ease;
+}
+
+#click-hint.hide {
+    opacity: 0;
+
+    transform:
+        translate(-50%, -50%)
+        translateY(-10px);
+}
