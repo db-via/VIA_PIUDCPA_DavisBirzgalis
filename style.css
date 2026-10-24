@@ -314,6 +314,14 @@ body {
     color: white;
 }
 
+.submit-planet-button {
+    left: auto;
+
+    right: 30px;
+
+    text-decoration: none;
+}
+
 /* Star Field Styling */
 #star-field {
     position: absolute;
@@ -1156,4 +1164,200 @@ body {
     transform:
         translate(-50%, -150%)
         translateY(-50px);
+}
+
+/* Submit Planet Page */
+body.form-page {
+    overflow: auto;
+
+    min-height: 100vh;
+
+    padding: 32px;
+
+    background-image:
+        url("images/formbackground_1.png");
+    
+    background-size: cover;
+    background-position: center;
+}
+
+.planet-form-page {
+    width: min(620px, 100%);
+
+    margin: 0 auto;
+}
+
+.form-back {
+    display: inline-block;
+
+    margin-bottom: 22px;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.3);
+
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.form-back:hover {
+    color: white;
+}
+
+.planet-form-panel {
+    padding: 32px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(18, 22, 28, 0.94),
+            rgba(5, 8, 12, 0.96)
+        );
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.15);
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 15px 50px
+        rgba(0, 0, 0, 0.65);
+}
+
+.form-eyebrow {
+    margin: 0 0 8px;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.planet-form-panel h1 {
+    margin: 0 0 12px;
+
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.form-intro {
+    margin: 0 0 28px;
+
+    color: rgba(220, 225, 230, 0.7);
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+.planet-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.planet-form label {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+.planet-form input,
+.planet-form select,
+.planet-form textarea {
+    width: 100%;
+
+    padding: 11px 12px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.15);
+
+    border-radius: 6px;
+
+    outline: none;
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.planet-form select option {
+    background-color: #11171d;
+
+    color: white;
+}
+
+.planet-form textarea {
+    resize: vertical;
+}
+
+.planet-form input:focus,
+.planet-form select:focus,
+.planet-form textarea:focus {
+    border-color:
+        rgba(180, 210, 255, 0.65);
+}
+
+.planet-submit-button {
+    padding: 12px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.22);
+
+    border-radius: 6px;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    color:
+        rgba(255, 255, 255, 0.8);
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+}
+
+.planet-submit-button:hover {
+    background:
+        rgba(255, 255, 255, 0.14);
+
+    color: white;
 }
