@@ -707,3 +707,15 @@ function showNextBody() {
 
 infoPrev.addEventListener("click", showPreviousBody);
 infoNext.addEventListener("click", showNextBody);
+
+const submitPlanetLink =
+    document.getElementById("submit-planet-link");
+
+if (submitPlanetLink) {
+    submitPlanetLink.addEventListener("click", () => {
+        sessionStorage.setItem(
+            "play-form-music",
+            "true"
+        );
+    });
+}
