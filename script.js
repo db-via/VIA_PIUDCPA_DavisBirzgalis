@@ -603,7 +603,7 @@ function focusSystemOn(body) {
 
     const bodyY = (rect.top + rect.height / 2 - camera.y) / camera.scale;
 
-    const bodySize = Math.max(rect.width, rect.height) / camera.scale;
+    const bodySize = Math.max(rect.width * 0.5 , rect.height * 0.5) / camera.scale;
 
     const scale = body.id === "kerbol" ? 1.5 : Math.min(6, Math.max(1.8, 200 / bodySize));
 
