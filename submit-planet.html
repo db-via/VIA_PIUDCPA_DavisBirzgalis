@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Submit a Planet</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="form-page">
+
+    <main class="planet-form-page">
+
+        <a
+            class="form-back"
+            href="index.html">
+            ← Back to Kerbol System
+        </a>
+
+        <section class="planet-form-panel">
+
+            <p class="form-eyebrow">
+                Future Planet Database
+            </p>
+
+            <h1>
+                Submit a New Planet
+            </h1>
+
+            <p class="form-intro">
+                This is a placeholder form for future dynamically added planets.
+            </p>
+
+            <form class="planet-form">
+
+                <label>
+                    Planet Name
+
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Example: Nova"
+                        required>
+                </label>
+
+                <label>
+                    Body Type
+
+                    <select name="type">
+                        <option>Planet</option>
+                        <option>Moon</option>
+                        <option>Dwarf Planet</option>
+                    </select>
+                </label>
+
+                <label>
+                    Planet Size
+
+                    <input
+                        type="number"
+                        name="size"
+                        placeholder="Example: 60">
+                </label>
+
+                <label>
+                    Image URL
+
+                    <input
+                        type="url"
+                        name="image"
+                        placeholder="images/planets/nova.png">
+                </label>
+
+                <label>
+                    Description
+
+                    <textarea
+                        name="description"
+                        placeholder="Write a short description of the planet..."
+                        rows="5"></textarea>
+                </label>
+
+                <button
+                    class="planet-submit-button"
+                    type="button">
+                    Submit Planet — Coming Soon
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</body>
+</html>
