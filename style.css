@@ -1133,7 +1133,7 @@ body {
         "Times New Roman",
         serif;
 
-    font-size: 30px;
+    font-size: 40px;
 
     letter-spacing: 1px;
 
@@ -1146,7 +1146,7 @@ body {
     z-index: 75;
 
     transition:
-        opacity 500ms ease,
+        opacity 250ms ease,
         transform 500ms ease;
 }
 
@@ -1154,6 +1154,6 @@ body {
     opacity: 0;
 
     transform:
-        translate(-50%, -50%)
-        translateY(-10px);
+        translate(-50%, -150%)
+        translateY(-50px);
 }
