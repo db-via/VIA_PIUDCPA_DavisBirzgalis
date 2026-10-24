@@ -92,9 +92,55 @@
 
             </form>
 
+            <audio
+                id="form-music"
+                src="audio/form.mp3"
+                loop>
+            </audio>
+
+            <button
+                id="music-toggle"
+                class="planet-submit-button music-button"
+                type="button">
+                ♫
+            </button>
+
         </section>
 
     </main>
+
+<script>
+    const formMusic = document.getElementById("form-music");
+    const musicToggle = document.getElementById("music-toggle");
+
+    function playFormMusic() {
+        formMusic.play()
+            .then(() => {
+                musicToggle.textContent = "♫";
+            })
+            .catch(() => {
+                // Browser blocked autoplay.
+                // The visitor can still use the music button.
+                musicToggle.textContent = "♫";
+            });
+    }
+
+    musicToggle.addEventListener("click", () => {
+        if (formMusic.paused) {
+            playFormMusic();
+        } else {
+            formMusic.pause();
+
+            musicToggle.textContent = "♫";
+        }
+    });
+
+    if (sessionStorage.getItem("play-form-music") === "true") {
+        sessionStorage.removeItem("play-form-music");
+
+        playFormMusic();
+    }
+</script>
 
 </body>
 </html>
