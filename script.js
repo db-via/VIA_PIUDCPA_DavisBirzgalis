@@ -300,6 +300,7 @@ const planets = [
 const kerbolButton = document.getElementById("kerbol"); // The Kerbol (Sun) button
 const planetContainer = document.getElementById("planet-container"); // The container for the planet buttons
 const starField = document.getElementById("star-field"); // The star field background
+const systemView = document.getElementById("system-view");
 
 const infoPanel = document.getElementById("info-panel"); // The information panel that displays details about the selected celestial body
 const infoClose = document.getElementById("info-close"); // The close button for the information panel
@@ -328,6 +329,7 @@ const celestialBodies = [
 ];
 
 let currentBodyIndex = 0;
+let camera = { scale: 1, x: 0, y: 0 };
 
 // Button for Kerbol (Sun)
 if (kerbolButton) {
@@ -578,14 +580,48 @@ function showInfo(body) {
 // Select Body
 // This function highlights the selected celestial body by adding a "selected" class to it and removing that class from any previously selected bodies.
 function selectBody(body) {
+    if (!body) return;
+
     document
         .querySelectorAll(".selected")
         .forEach(element => {
             element.classList.remove("selected");
         });
 
-
     body.classList.add("selected");
+
+    focusSystemOn(body);
+}
+
+// Zoom and pan the whole system view instead of moving the selected planet itself.
+function focusSystemOn(body) {
+    if (!systemView) return;
+
+    const rect = body.getBoundingClientRect();
+
+    const bodyX = (rect.left + rect.width / 2 - camera.x) / camera.scale;
+
+    const bodyY = (rect.top + rect.height / 2 - camera.y) / camera.scale;
+
+    const bodySize = Math.max(rect.width, rect.height) / camera.scale;
+
+    const scale = body.id === "kerbol" ? 1.5 : Math.min(6, Math.max(1.8, 200 / bodySize));
+
+    const targetX = window.innerWidth / 2;
+    const targetY = window.innerHeight / 2;
+
+    camera = { scale, x: targetX - bodyX * scale, y: targetY - bodyY * scale};
+
+    systemView.style.transform =
+        `translate(${camera.x}px, ${camera.y}px) scale(${camera.scale})`;
+}
+
+function resetSystemView() {
+    camera = { scale: 1, x: 0, y: 0 };
+
+    if (systemView) {
+        systemView.style.transform = "";
+    }
 }
 
 // Close Information
@@ -595,6 +631,8 @@ function closeInfo() {
     infoPanel.setAttribute("aria-hidden", "true");
 
     ambientPlayer.pause();
+
+    resetSystemView();
 
     document
         .querySelectorAll(".selected")
@@ -629,6 +667,15 @@ document.addEventListener("keydown", event => {
     }
 });
 
+function getBodyButton(body) {
+    return [...document.querySelectorAll("#kerbol, .planet, .moon")]
+        .find(button => {
+            const image = button.querySelector("img");
+
+            return image && image.alt === body.name;
+        });
+}
+
 function showPreviousBody() {
     currentBodyIndex--;
 
@@ -636,7 +683,10 @@ function showPreviousBody() {
         currentBodyIndex = celestialBodies.length - 1;
     }
 
-    showInfo(celestialBodies[currentBodyIndex]);
+    const body = celestialBodies[currentBodyIndex];
+
+    selectBody(getBodyButton(body));
+    showInfo(body);
 }
 
 function showNextBody() {
@@ -646,7 +696,10 @@ function showNextBody() {
         currentBodyIndex = 0;
     }
 
-    showInfo(celestialBodies[currentBodyIndex]);
+    const body = celestialBodies[currentBodyIndex];
+
+    selectBody(getBodyButton(body));
+    showInfo(body);
 }
 
 infoPrev.addEventListener("click", showPreviousBody);
