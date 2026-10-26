@@ -1,3 +1,7 @@
+/* 
+   Global resets, page defaults, and the main solar-system canvas.
+*/
+
 /* Global Styles */
 * {
     box-sizing: border-box;
@@ -41,6 +45,8 @@ body {
             #000000 100%
         );
 }
+
+/* Main Page Header */
 
 /* System Title Styling */
 .system-title {
@@ -91,10 +97,9 @@ body {
         0 1px 4px rgba(0, 0, 0, 0.8);
 }
 
-/* =========================================================
-   CREDITS BUTTON
-   ========================================================= */
+/* Main Page Controls */
 
+/* Credits Button */
 .credits-button {
     position: absolute;
 
@@ -314,6 +319,7 @@ body {
     color: white;
 }
 
+/* Submit Planet Link: shares the Credits button appearance. */
 .submit-planet-button {
     left: auto;
 
@@ -321,6 +327,11 @@ body {
 
     text-decoration: none;
 }
+
+/* Solar System Styling */
+/*
+   Background stars, camera layer, star, planets, moons, and labels.
+*/
 
 /* Star Field Styling */
 #star-field {
@@ -776,6 +787,8 @@ body {
     z-index: 10;
 }
 
+/* Celestial Body Information Panel */
+
 /* Information Panel Styling */
 .info-panel {
     position: absolute;
@@ -1111,6 +1124,8 @@ body {
     height: 36px;
 }
 
+/* Onboarding Hint */
+
 #click-hint {
     position: absolute;
 
@@ -1165,6 +1180,8 @@ body {
         translate(-50%, -150%)
         translateY(-50px);
 }
+
+/* Planet Submission Page */
 
 /* Submit Planet Page */
 body.form-page {
