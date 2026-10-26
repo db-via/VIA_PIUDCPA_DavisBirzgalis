@@ -1,5 +1,11 @@
+/*
+CELESTIAL BODY DATA
+Hardcoded data used to build the Kerbol system.
+*/
+
 // Data for the Kerbol System
-// This section defines the data for the Kerbol System, including the star (Kerbol), planets, and moons. Each celestial body has properties such as name, type, image, description, statistics, and ambient audio.
+// Defines the data for the Kerbol System, including the star (Kerbol), planets, and moons. 
+// Each celestial body has properties such as name, type, image, description, statistics, and ambient audio.
 const kerbol = {
     name: "Kerbol",
     type: "Star",
@@ -18,7 +24,7 @@ const kerbol = {
 };
 
 // Planets and Moons
-// This array contains the data for each planet and its moons in the Kerbol System.
+// The array contains the data for each planet and its moons in the Kerbol System.
 const planets = [
 
     {
@@ -295,28 +301,34 @@ const planets = [
     }
 ];
 
+/*
+DOM REFERENCES AND APPLICATION STATE
+Cached page elements, the navigation order, and camera state.
+*/
+
 // HTML Elements
-// This section retrieves references to various HTML elements that will be used in the script.
+// Retrieves references to various HTML elements that will be used in the script.
 const kerbolButton = document.getElementById("kerbol"); // The Kerbol (Sun) button
 const planetContainer = document.getElementById("planet-container"); // The container for the planet buttons
 const starField = document.getElementById("star-field"); // The star field background
-const systemView = document.getElementById("system-view");
-const clickHint = document.getElementById("click-hint");
+const systemView = document.getElementById("system-view"); // The main container for the entire system view
+const clickHint = document.getElementById("click-hint"); // The hint that appears briefly to indicate that the user can click on celestial bodies
 const infoPanel = document.getElementById("info-panel"); // The information panel that displays details about the selected celestial body
 const infoClose = document.getElementById("info-close"); // The close button for the information panel
 const infoImage = document.getElementById("info-image"); // The image element in the information panel
 const infoName = document.getElementById("info-name"); // The name element in the information panel
-const infoPrev = document.getElementById("info-prev");
-const infoNext = document.getElementById("info-next");
+const infoPrev = document.getElementById("info-prev"); // The previous planet
+const infoNext = document.getElementById("info-next"); // The next planet
 const infoType = document.getElementById("info-type"); // The type element in the information panel
 const infoDescription = document.getElementById("info-description"); // The description element in the information panel
 const infoStatistics = document.getElementById("info-statistics"); // The statistics element in the information panel
 const ambientPlayer = document.getElementById("ambient-player"); // The audio player for ambient sounds
 const ambientName = document.getElementById("ambient-name"); // The name element for the ambient sound
-const creditsButton =document.getElementById("credits-button");
-const creditsPanel =document.getElementById("credits-panel");
-const creditsClose =document.getElementById("credits-close");
+const creditsButton =document.getElementById("credits-button"); // The button that opens the credits panel
+const creditsPanel =document.getElementById("credits-panel"); // The credits panel that displays the credits information
+const creditsClose =document.getElementById("credits-close"); // The button that closes the credits panel
 
+// Derived data and shared state
 const celestialBodies = [
     kerbol,
     ...planets.flatMap(planet => [
@@ -328,12 +340,16 @@ const celestialBodies = [
 let currentBodyIndex = 0;
 let camera = { scale: 1, x: 0, y: 0 };
 
+// STARTUP BEHAVIOR
+
+// Welcome hint
 setTimeout(() => {
     if (clickHint) {
         clickHint.classList.add("hide");
     }
 }, 1500);
 
+// Primary controls
 // Button for Kerbol (Sun)
 if (kerbolButton) {
     kerbolButton.addEventListener("click", () => {
@@ -355,8 +371,11 @@ creditsClose.addEventListener("click", () => {
     }
 );
 
+// SCENE CREATION
+
+// Background stars
 // Generate Stars
-// This section creates a star field background by generating multiple star elements with random properties.
+// Creates a star field background by generating multiple star elements with random properties.
 for (let i = 0; i < 300; i++) {
     const star = document.createElement("div");
 
@@ -376,8 +395,8 @@ for (let i = 0; i < 300; i++) {
     starField.appendChild(star);
 }
 
-// Create Planet Systems
-// This section creates the planet systems by iterating over the planets array and generating the necessary HTML elements for each planet.
+// Planets and their systems
+// Creates the planet systems by iterating over the planets array and generating the necessary HTML elements for each planet.
 planets.forEach(planet => {
     const system = document.createElement("div");
 
@@ -426,7 +445,7 @@ planets.forEach(planet => {
     planetContainer.appendChild(system);
 });
 
-// Create Moons
+// Moon creation helper
 // This function creates the moons for a given planet by generating the necessary HTML elements and positioning them appropriately.
 function createMoons(system, planet) {
     const spacing = 48;
@@ -503,8 +522,10 @@ function createMoons(system, planet) {
     });
 }
 
-// Show Information
-// This function displays the information panel for a selected celestial body, populating it with the relevant data and playing the associated ambient audio.
+// INFORMATION PANEL
+
+// Populate the selected body's information
+// Displays the information panel for a selected celestial body, populating it with the relevant data and playing the associated ambient audio.
 function showInfo(body) {
     if (!infoPanel) return;
 
@@ -580,8 +601,10 @@ function showInfo(body) {
     infoPanel.setAttribute("aria-hidden", "false");
 }
 
-// Select Body
-// This function highlights the selected celestial body by adding a "selected" class to it and removing that class from any previously selected bodies.
+// SELECTION AND CAMERA CONTROL
+
+// Select a visible body
+// Highlights the selected celestial body by adding a "selected" class to it and removing that class from any previously selected bodies.
 function selectBody(body) {
     if (!body) return;
 
@@ -627,8 +650,8 @@ function resetSystemView() {
     }
 }
 
-// Close Information
-// This function closes the information panel and stops any ambient audio that is playing.
+// Restore the default system view
+// Closes the information panel and stops any ambient audio that is playing.
 function closeInfo() {
     infoPanel.classList.remove("open");
     infoPanel.setAttribute("aria-hidden", "true");
@@ -644,7 +667,9 @@ function closeInfo() {
         });
 }
 
+// PANEL CONTROL
 
+// Close controls
 if (infoClose) {
     infoClose.addEventListener("click", closeInfo);
 }
@@ -670,6 +695,7 @@ document.addEventListener("keydown", event => {
     }
 });
 
+// Previous / next navigation helpers
 function getBodyButton(body) {
     return [...document.querySelectorAll("#kerbol, .planet, .moon")]
         .find(button => {
@@ -707,6 +733,8 @@ function showNextBody() {
 
 infoPrev.addEventListener("click", showPreviousBody);
 infoNext.addEventListener("click", showNextBody);
+
+// FORM PAGE HANDOFF
 
 const submitPlanetLink =
     document.getElementById("submit-planet-link");
