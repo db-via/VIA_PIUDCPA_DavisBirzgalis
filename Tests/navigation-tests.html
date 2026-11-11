@@ -67,6 +67,45 @@
             }
             testResults.appendChild(result);
         }
+        // TEST 1: Planet data exists
+        test("Planets array contains planets",planets.length > 0);
+        // TEST 2: Every planet has required data
+        const planetsHaveData = planets.every(planet =>
+                planet.name &&
+                planet.type &&
+                planet.image &&
+                planet.description &&
+                planet.stats &&
+                planet.audio);
+        test("Every planet has required data", planetsHaveData);
+        // TEST 3: Moon parent is correct
+        let moonParentsCorrect = true;
+        planets.forEach(planet => {
+            if (!planet.moons) {
+                return;
+            }
+            planet.moons.forEach(moon => {
+                if (moon.stats.Parent!== planet.name) {
+                    moonParentsCorrect = false;
+                }
+            });
+        });
+        test("Every moon has the correct parent",moonParentsCorrect);
+        // TEST 4: Next navigation
+        currentBodyIndex = 0;
+        showNextBody();
+        test("Next navigation moves to the next celestial body",currentBodyIndex === 1);
+        // TEST 5: Previous navigation
+        showPreviousBody();
+        test("Previous navigation moves back to the previous celestial body",currentBodyIndex === 0);
+        // TEST 6: Previous wraps from first to last
+        currentBodyIndex = 0;
+        showPreviousBody();
+        test("Previous navigation wraps from first to last",currentBodyIndex === celestialBodies.length - 1);
+        // TEST 7: Next wraps from last to first
+        currentBodyIndex =celestialBodies.length - 1;
+        showNextBody();
+        test("Next navigation wraps from last to first",currentBodyIndex === 0);
     </script>
 </body>
 </html>
