@@ -4,8 +4,69 @@
     <meta charset="UTF-8">
     <title>Kerbol System Tests</title>
     <style>
+        body {
+            background: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+        .pass {
+            color: lightgreen;
+        }
+        .fail {
+            color: tomato;
+        }
+        #test-area {
+            display: none;
+        }
     </style>
 </head>
 <body>
+    <h1>Kerbol System Tests</h1>
+    <div id="results"></div>
+    <div id="test-area">
+
+        <div id="star-field"></div>
+
+        <div id="system-view">
+            <button id="kerbol"></button>
+            <div id="planet-container"></div>
+        </div>
+
+        <div id="click-hint"></div>
+
+        <aside id="info-panel">
+            <button id="info-close"></button>
+            <img id="info-image">
+            <h1 id="info-name"></h1>
+            <button id="info-prev"></button>
+            <button id="info-next"></button>
+            <p id="info-type"></p>
+            <p id="info-description"></p>
+            <div id="info-statistics"></div>
+            <span id="ambient-name"></span>
+            <audio id="ambient-player"></audio>
+        </aside>
+        <button id="credits-button"></button>
+        <div id="credits-panel">
+            <button id="credits-close"></button>
+        </div>
+    </div>
+    <script src="../script.js"></script>
+    <!-- Tests -->
+    <script>
+        const testResults = document.getElementById("results");
+        function test(name, condition) {
+            const result = document.createElement("p");
+            if (condition) {
+                result.textContent = "PASS: " + name;
+                result.className = "pass";
+            } else {
+                result.textContent = "FAIL: " + name;
+                result.className = "fail";
+            }
+            testResults.appendChild(result);
+        }
+    </script>
 </body>
 </html>
