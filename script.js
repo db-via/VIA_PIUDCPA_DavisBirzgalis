@@ -734,6 +734,21 @@ function showNextBody() {
 infoPrev.addEventListener("click", showPreviousBody);
 infoNext.addEventListener("click", showNextBody);
 
+// NAVIGATE BETWEEN MAIN CELESTIAL BODIES VIA NUMBER KEYS
+const mainCelestialBodies = celestialBodies.filter(body => body.type === "Star" || body.type === "Planet");
+
+document.addEventListener("keydown", event => {
+
+    if (event.key >= "1" && event.key <= "8") {
+        const index = parseInt(event.key) - 1;
+        if (index < mainCelestialBodies.length) {
+            const body = mainCelestialBodies[index];
+            selectBody(getBodyButton(body));
+            showInfo(body);
+        }
+    }
+});
+
 // FORM PAGE HANDOFF
 
 const submitPlanetLink =
