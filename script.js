@@ -688,10 +688,7 @@ document.addEventListener("keydown", event => {
         showNextBody();
     }
 
-    if (
-        event.key === "ArrowDown" &&
-        infoPanel.classList.contains("open")
-    ) {
+    if (event.key === "ArrowDown" && infoPanel.classList.contains("open")) {
         event.preventDefault();
         infoPanel.scrollBy({
             top: 80,
@@ -699,10 +696,7 @@ document.addEventListener("keydown", event => {
         });
     }
 
-    if (
-        event.key === "ArrowUp" &&
-        infoPanel.classList.contains("open")
-    ) {
+    if (event.key === "ArrowUp" && infoPanel.classList.contains("open")) {
         event.preventDefault();
         infoPanel.scrollBy({
             top: -80,
