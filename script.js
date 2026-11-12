@@ -675,15 +675,9 @@ if (infoClose) {
 }
 
 document.addEventListener("keydown", event => {
-    if (
-        event.key === "Escape" &&
-        infoPanel.classList.contains("open")
-    ) {
-        closeInfo();
-    }
 
-    if (!infoPanel.classList.contains("open")) {
-        return;
+    if (event.key === "Escape") {
+        closeInfo();
     }
 
     if (event.key === "ArrowLeft") {
@@ -692,6 +686,28 @@ document.addEventListener("keydown", event => {
 
     if (event.key === "ArrowRight") {
         showNextBody();
+    }
+
+    if (
+        event.key === "ArrowDown" &&
+        infoPanel.classList.contains("open")
+    ) {
+        event.preventDefault();
+        infoPanel.scrollBy({
+            top: 80,
+            behavior: "smooth"
+        });
+    }
+
+    if (
+        event.key === "ArrowUp" &&
+        infoPanel.classList.contains("open")
+    ) {
+        event.preventDefault();
+        infoPanel.scrollBy({
+            top: -80,
+            behavior: "smooth"
+        });
     }
 });
 
